@@ -1,0 +1,36 @@
+.page-header{
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/top/sample-mv.jpeg) no-repeat center center/cover;
+
+  @include mq('lg'){
+    height: 280px;
+  }
+}
+
+.page-header__text{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 48px;
+
+  h1{
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  p{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  @include mq('lg'){
+    padding-top: 64px;
+  }
+}

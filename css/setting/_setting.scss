@@ -1,0 +1,72 @@
+/*================================
+	ブレイクポイント
+=================================*/
+
+$breakpoints: (
+  'sm': (min-width: 640px),
+  'md': (min-width: 768px),
+  'lg': (min-width: 1024px),
+  'xl': (min-width: 1280px)
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: lg) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: xl) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*================================
+	色設定
+=================================*/
+$color-main: #009D80;
+$gradation: linear-gradient(90deg, #009D80 -8.85%, #71B655 122.4%);
+$color-sub: #EDF8F6;
+$color-accent: #9e8100;
+
+/*================================
+	全体共通
+=================================*/
+body{
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, sans-serif; 
+  font-weight: 500;
+  color: #333;
+  line-height: 1.75;
+}
+
+.inner{
+  max-width: 1200px;
+  padding-right: 6%;
+  padding-left: 6%;
+  margin: 0 auto;
+}
+
+a{
+  color: inherit;
+  cursor:pointer;
+}
+
+li{
+  list-style: none;
+}
+
+.-center{
+  text-align: center;
+}

@@ -1,0 +1,47 @@
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+
+  span{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  box-sizing: border-box;
+  color: $color-main;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  box-shadow: 0px 5px 12px #CAD4E2, -6px -6px 12px #FFF;
+  border-radius: 10px;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  transition-duration: 0.2s;
+  }
+}
+
+.button:hover span{
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 4px #CAD4E2, -2px -2px 4px #FFF;
+}
+
+.button__area{
+  margin-top: 24px;
+
+  @include mq('md'){
+    margin-top: 40px;
+  }
+}
+

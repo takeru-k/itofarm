@@ -1,0 +1,67 @@
+.section{
+  padding: 60px 0;
+
+  @include mq('md'){
+    padding: 96px 0;
+  }
+}
+
+.section + .section{
+    padding-top: 0;
+  }
+
+.section-bg{
+  padding: 60px 0;
+  background: $color-sub;
+
+  @include mq('md'){
+    padding: 88px 0 96px;
+  }
+}
+
+
+
+.section__title{
+  margin-bottom: 16px;
+  line-height: 1.2;
+  h2{
+    font-size: 20px;
+    
+  }
+
+  span{
+    text-transform: uppercase;
+    color: $color-main;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    background: #9e8100;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+
+    @include mq('md'){
+      font-size: 40px;
+    }
+  }
+}
+
+.-stroke{
+   -webkit-text-stroke:1px $color-main;
+   background: $color-sub !important;
+}
+
+.section__text{
+  margin-top: 12px;
+
+  p{
+    margin-bottom: 12px;
+  }
+}
+
+.section__contents{
+  margin: 24px 0;
+
+  @include mq('md'){
+    margin: 48px 0;
+  }
+}

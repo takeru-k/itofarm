@@ -1,0 +1,59 @@
+@media not all and (min-width: 768px){
+  .table{
+
+    
+
+    th{
+      display: block;
+      padding-top: 16px;
+      
+    }
+
+    td{
+      display: block;
+      padding-bottom: 8px;
+
+      li:first-child{
+        padding-bottom: 10px;
+      }
+    }
+  }
+} 
+
+.table{
+  
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+
+  tr{
+      border-bottom: 1px solid #eaeaea;
+
+      &:first-child{
+        border-top: 1px solid #eaeaea;
+      }
+      }
+
+  @include mq('lg'){
+    margin-top: 24px;
+  }
+
+  th{
+    text-align: left;
+    width: 150px;
+    color: $color-main;
+
+    @include mq('lg'){
+      padding: 24px;
+    }
+  }
+
+  td{
+    @include mq('lg'){
+      padding: 24px;
+    }
+  }
+
+}
+

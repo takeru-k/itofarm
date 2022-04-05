@@ -1,0 +1,199 @@
+/* メニューのスタイリング */
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12px;
+  width: 95vw;
+  max-width: 1200px;
+  position: fixed;
+  z-index: 100;
+  background: #fff;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include mq('md'){
+    padding: 8px 12px;
+  }
+}
+
+.header__logo{
+  width: 120px;
+
+  @include mq('md'){
+    width: 160px;
+  }
+}
+
+.header__nav {
+	background: $gradation;
+  height: 100%;
+  position: fixed;
+  width: 95vw;
+  z-index: 98;
+
+  ul{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+  }
+
+  li{
+    padding: 24px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-weight: 700;
+  }
+
+	a{
+    text-decoration: none;
+		&:hover{
+			color: $color-main;
+		}
+	}
+}
+
+.header__button__line{
+  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+  cursor: pointer;
+  width: 50px;
+  height:50px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.header__button__line span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    border-radius: 2px;
+    background: $color-main;
+    width: 45%;
+  }
+
+.header__button__line span:nth-of-type(1) {
+  top:15px; 
+}
+
+.header__button__line span:nth-of-type(2) {
+  top:23px;
+}
+
+.header__button__line span:nth-of-type(3) {
+  top:31px;
+}
+
+.header__button__line span:nth-of-type(3)::after {
+  position: absolute;
+  top:5px;
+  left:-2px;
+  color: $color-main;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+.header__button__line.active span:nth-of-type(3)::after {
+  transform: translateY(0) rotate(-45deg);
+  top:5px;
+  left:4px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+.header__button__line.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.header__button__line.active span:nth-of-type(2) {
+  opacity: 0;/*真ん中の線は透過*/
+}
+
+.header__button__line.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/*========= ナビゲーションのためのCSS ===============*/
+@media not all and (min-width: 1024px){
+.pc-nav{
+  display: none;
+}
+
+#g-nav{
+  position:fixed;
+  top:-120%;
+  left:0;
+  width:100%;
+  height: 100vh;
+  background:$gradation;
+  transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+  top: 0;
+}
+
+}
+
+/* 1024px以上のスタイリング */
+@include mq('lg'){
+  .header__nav {
+		display: none;
+	}
+
+  .header__inner{
+    height: 72px;
+    padding-right: 24px;
+    padding-left: 24px;
+    top: 24px;
+  }
+
+	.pc-nav {
+    display: block;
+    width: 56%;
+    ul{
+
+   
+		/* メニューを横に */
+		display: flex;
+		justify-content: space-between;
+    text-align: center;
+		position: relative;
+		width: 100%;
+		height: 100%;
+     }
+		
+		li{
+      color: #333;
+      font-weight: bold;
+      font-size: 0.9rem;
+
+      &:hover{
+        opacity: 0.8;
+      }
+
+      a{
+        text-decoration: none;
+      }
+		}
+	}
+
+  .header__button{
+    display: none;
+  }
+}
+
+
+
+
+
+  

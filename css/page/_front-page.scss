@@ -1,0 +1,122 @@
+.main-visual{
+  height: 100vh;
+  max-height: 640px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/top/sample-mv.jpeg) no-repeat center center/cover;
+
+  @include mq('lg'){
+    height: 80vh;
+  }
+}
+
+.main-visual__text{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+  h1{
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+  }
+
+  p{
+    padding-top: 16px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+
+
+
+.link-list{
+
+  a{
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+ }
+}
+
+.link__mission{
+  background: url(../images/top/sample01.jpeg) no-repeat center center/cover;
+}
+
+.link__message{
+  background: url(../images/top/sample-vision01.jpeg) no-repeat center center/cover;
+}
+
+@include mq('md'){
+  .link-list{
+    display: flex;
+    margin-top: 40px;
+    li{
+      width: 50%;
+    }
+
+    a{
+      height: 350px;
+      font-size: 28px;
+    }
+  }
+}
+
+
+
+
+.cta__wrapper{
+  background: $color-sub;
+  padding: 48px 24px;
+}
+
+.cta__body{
+  text-align: center;
+  margin-top: 24px;
+}
+
+
+.cta__note{
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.cta__text{
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+@include mq('md'){
+  .cta__wrapper{
+    display: flex;
+  }
+
+  .cta__header{
+    width: 50%;
+    border-right: 1px solid #e5e5e5;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .cta__body{
+    width: 50%;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
+
+.-tel{
+  font-size: 20px;
+}

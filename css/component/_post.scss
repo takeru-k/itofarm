@@ -1,0 +1,52 @@
+.post__list{
+  max-width: 800px;
+  margin: 0 auto;
+
+  li{
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 0;
+
+    &:last-child{
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    @include mq('md'){
+      display: flex;
+    }
+  }
+
+
+}
+
+.post__cat{
+  font-size: 0.9rem;
+  background: $color-main;
+  padding: 2px 8px;
+  color: #fff;
+  min-width: 48px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 12px;
+  
+  a{
+    text-decoration: none;
+  }
+}
+
+.-blue{
+  background: #32009e;
+}
+
+.-red{
+  background: #9e001d;
+}
+
+.post__title{
+  display: block;
+  margin-top: 12px;
+
+  @include mq('md'){
+    margin-top: 0;
+    margin-left: 24px;
+  }
+}
